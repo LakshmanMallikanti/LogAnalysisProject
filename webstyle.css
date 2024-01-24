@@ -220,3 +220,12 @@ h3{
     padding-top: 100px; 
 
 }
+footer{
+    background-color: rgb(13, 13, 13);
+    display: inline;
+    display: flex;
+    justify-content: center;
+}
+#foot{
+    color: white;
+}
