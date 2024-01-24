@@ -156,7 +156,7 @@ h3{
     font-weight: 600;
     margin:10px 0 ;
 }
-.service-col:hover{
+.service-col > img:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
 }
 @media(max-width: 700px){
