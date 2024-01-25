@@ -92,7 +92,7 @@ def main():
     accuracy, report, confusion_mat = test_model(model, X_test, y_test)
 
     # Print the results
-    print(f'Accuracy: {accuracy}')
+    print(f'Accuracy: {accuracy* 100:.5f}')
     print('Classification Report:')
     print(report)
     
