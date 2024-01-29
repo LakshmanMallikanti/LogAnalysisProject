@@ -27,7 +27,7 @@ def preprocess_data(dataset):
 
 
     # Remove identical rows
-    dataset = dataset.drop_duplicates()
+    dataset.drop_duplicates(inplace = True)
 
     # Drop non-relevant columns (e.g., date-time column)
     dataset = dataset.drop(columns=['Timestamp'], axis=1, errors='ignore')
