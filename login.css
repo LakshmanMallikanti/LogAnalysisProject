@@ -55,7 +55,7 @@
     transform: scaleX(1);
 }
 
-.navbar{
+.navbar .btnLogin-popup{
     position: relative;
     background: transparent;
     border: none;
