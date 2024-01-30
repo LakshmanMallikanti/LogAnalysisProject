@@ -154,10 +154,6 @@ mysqli_close($conn);
 
 <!-- <section class="section"> -->
 <div class="wrapper">
-    <span class="icon-close">
-        <i class="bx bx-x"></i>
-    </span>
-
     <div class="logreg-box">
         <!-- login form -->
         <div class="form-box login">
