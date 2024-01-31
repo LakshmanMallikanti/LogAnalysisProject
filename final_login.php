@@ -24,6 +24,32 @@ if (isset($_SESSION['email'])) {
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = $login_err = $err = "";
 
+// Google Sign-In
+$client = new Google_Client();
+$client->setClientId('YOUR_CLIENT_ID');
+$client->setClientSecret('YOUR_CLIENT_SECRET');
+$client->setRedirectUri('YOUR_CALLBACK_URL');
+$client->addScope("email");
+
+if (isset($_GET['code'])) {
+    $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+    $client->setAccessToken($token);
+
+    $oauth = new Google_Service_Oauth2($client);
+    $userInfo = $oauth->userinfo->get();
+
+    // You can use $userInfo to get user details
+    $email = $userInfo->getEmail();
+
+    // Perform your login logic here using $email
+
+    // Redirect to your welcome page after successful login
+    header("location: welcome.php");
+    exit;
+} else {
+    $authUrl = $client->createAuthUrl();
+}
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['login'])) {
         // Login process
