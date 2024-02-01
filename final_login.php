@@ -261,10 +261,6 @@ mysqli_close($conn);
             <i class="bx bxl-google"></i>
             <span>Login with Google</span>
         </a>
-        <!-- <a href="#">
-            <i class='bx bxl-facebook' ></i>
-            <span>Login with Facebook</span>
-        </a> -->
     </div>
 </div>
 <!-- </section> -->
