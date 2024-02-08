@@ -24,7 +24,7 @@ if (isset($_SESSION['email'])) {
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = $login_err = $err = "";
 
-// Google Sign-In
+/* Google Sign-In
 $client = new Google_Client();
 $client->setClientId('YOUR_CLIENT_ID');
 $client->setClientSecret('YOUR_CLIENT_SECRET');
@@ -48,7 +48,8 @@ if (isset($_GET['code'])) {
     exit;
 } else {
     $authUrl = $client->createAuthUrl();
-}
+}*/
+
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['login'])) {
@@ -171,7 +172,7 @@ mysqli_close($conn);
     <a href="#" class="cyber">Cyber</a>
     <nav class="navbar">
         <a href="web.html">Home</a>
-        <a href="#">About</a>
+        <a href="about.html">About</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
         <button class="btnLogin-popup">Login</button>
