@@ -2,7 +2,6 @@ const wrapper = document.querySelector('.wrapper');
 const registerLink = document.querySelector('.register-link');
 const loginLink = document.querySelector('.login-link');
 const btnPopup = document.querySelector('.btnLogin-popup');
-const iconClose = document.querySelector('.icon-close');
 const Eyecon = document.querySelectorAll('.Eyecon');
 const x = document.querySelectorAll('#MyInput');
 
@@ -16,11 +15,6 @@ loginLink.onclick = () => {
 
 btnPopup.onclick = () => {
     wrapper.classList.add('active-popup');
-};
-
-iconClose.onclick = () => {
-    wrapper.classList.remove('active-popup');
-    wrapper.classList.remove('active');
 };
 
 for(let i=0;i<Eyecon.length;i++){
