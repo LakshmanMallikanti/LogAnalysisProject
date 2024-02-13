@@ -50,6 +50,7 @@
         100% {
           opacity: 1;
         }
+<<<<<<< HEAD
       }
       details summary::-webkit-details-marker {
         display: none;
@@ -102,42 +103,113 @@
         <a href="login.html">Login</a>
       </nav>
     </header>
+=======
+        section {
+          padding-top: 3rem;
+          width: 50%;
+          margin: auto;
+          position: absolute;
+          bottom: 50px;
+          right: 50px;
+        }
+        h1 {
+          font-size: 2rem;
+          font-weight: 500;
+        }
+        details[open] summary ~ * {
+          animation: open 0.3s ease-in-out;
+        }
+  
+        @keyframes open {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        details summary::-webkit-details-marker {
+          display: none;
+        }
+  
+        details summary {
+          width: 100%;
+          padding: 0.5rem 0;
+          border-top: 1px solid rgb(255, 255, 255);
+          position: relative;
+          cursor: pointer;
+          font-size: 1.25rem;
+          font-weight: 300;
+          list-style: none;
+        }
+  
+        details summary:after {
+          content: "+";
+          color: rgb(255, 255, 255);
+          position: absolute;
+          font-size: 1.75rem;
+          line-height: 0;
+          margin-top: 0.75rem;
+          right: 0;
+          font-weight: 200;
+          transform-origin: center;
+          transition: 200ms linear;
+        }
+        details[open] summary:after {
+          transform: rotate(45deg);
+          font-size: 2rem;
+        }
+        details summary {
+          outline: 0;
+        }
+        details p {
+          font-size: 0.95rem;
+          margin: 0 0 1rem;
+          padding-top: 1rem;
+        }
+      </style>
+</head>
+<body>
+<header class="header">
+    <a href="#" class="cyber">Cyber</a>
+    <nav class="navbar">
+        <a href="web.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Contact</a>
+        <button class="btnLogin-popup">Login</button>
+    </nav>
+</header>
+>>>>>>> 9b4a37d91e5d8721f3195a9e8e607a6c20142200
     <section>
-      <h1>Hypertext Accordion</h1>
+      <h1>Frequently Asked Questions</h1>
       <details class="accordion">
-        <summary>Details</summary>
+        <summary>What is Log Analysis?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+            Log analysis is essential for identifying issues in digital systems by examining system logs. This process streamlines operations, aids in incident analysis, and enables data-driven decisions for a secure and efficient infrastructure.
         </p>
       </details>
       <details class="accordion">
-        <summary>Features</summary>
+        <summary>Why is Log Analysis important?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+            Log analysis is crucial for swiftly identifying anomalies, errors, and potential security threats. It contributes to operational efficiency, streamlining troubleshooting processes, and aiding in post-incident analysis.
         </p>
       </details>
       <details class="accordion">
-        <summary>Information</summary>
+        <summary>What role does Log Analysis play in troubleshooting?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+            Log analysis is a vital part of troubleshooting as it helps pinpoint the root causes of issues. By examining logs, IT teams can identify errors, performance bottlenecks, and other factors affecting system functionality.
         </p>
       </details>
       <details class="accordion">
-        <summary>Specifications</summary>
+        <summary>What types of logs are typically analyzed?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+            Various logs are analyzed, including system logs, application logs, security logs, and network logs. Each provides specific information related to the functioning of different components within a system.
+        </p>
+      </details>
+      <details class="accordion">
+        <summary>How does Log Analysis contribute to security?</summary>
+        <p>
+            Log analysis plays a key role in cybersecurity by detecting and mitigating security threats. It helps identify unusual patterns, unauthorized access, and other indicators of potential breaches.
         </p>
       </details>
     </section>
