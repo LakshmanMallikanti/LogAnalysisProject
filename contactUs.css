@@ -16,14 +16,15 @@
 .custom-shape-divider-top-1707374832 svg {
     position: relative;
     display: block;
-    width: calc(129% + 1.3px);
-    height: 101px;
+    width: calc(115% + 1.3px);
+    height: 192px;
     transform: rotateY(180deg);
 }
 
 .custom-shape-divider-top-1707374832 .shape-fill {
     fill: #b7ffe8;
 }
+
 body{
     font-family: 'Outfit';
     background: #fff;
@@ -103,6 +104,7 @@ body{
         display: none;
     }
 }
+
 /*form{
     background: #fff;
     display: flex;
