@@ -70,8 +70,8 @@ def train_and_evaluate_model(train_file, test_file):
 
 # Example usage
 if __name__ == "__main__":
-    train_file = r"C:\Users\laksh\Desktop\CICIDS2019.csv"
-    test_file = r"C:\Users\laksh\Desktop\CICIDS2017.csv"
+    train_file = r"C:\Users\laksh\Desktop\CICIDS20181.csv"
+    test_file = r"C:\Users\laksh\Desktop\CICIDS20182.csv"
     accuracy, anomaly_prediction, confusion_mat = train_and_evaluate_model(train_file, test_file)
     print("Accuracy:", accuracy)
     print("Anomaly Prediction:", anomaly_prediction)
