@@ -173,7 +173,7 @@ mysqli_close($conn);
     <nav class="navbar">
         <a href="web.html">Home</a>
         <a href="about.html">About</a>
-        <a href="#">Contact</a>
+        <a href="contactUs.html">Contact</a>
         <button class="btnLogin-popup">Login</button>
     </nav>
 </header>

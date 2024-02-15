@@ -1,141 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and Register</title>
-    <link rel="stylesheet" href="login.css"/>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/bac43738cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bac43738cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <style>
-        html,
-        .root {
-          padding: 0;
-          margin: 0;
-          font-size: 18px;
+      html,
+      .root {
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+      }
+
+      body {
+        font: menu;
+        color: antiquewhite;
+        font-size: 1rem;
+        line-height: 1.4;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        padding-bottom: 400px;
+      }
+      section {
+        padding-top: 4rem;
+        width: 50%;
+        margin: auto;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      details[open] summary ~ * {
+        animation: open 0.3s ease-in-out;
+      }
+
+      @keyframes open {
+        0% {
+          opacity: 0;
         }
-  
-        body {
-          font: menu;
-          color:antiquewhite;
-          font-size: 1rem;
-          line-height: 1.4;
-          padding: 0;
-          margin: 0;
+        100% {
+          opacity: 1;
         }
-        section {
-          padding-top: 4rem;
-          width: 50%;
-          margin: auto;
-        }
-        h1 {
-          font-size: 2rem;
-          font-weight: 500;
-        }
-        details[open] summary ~ * {
-          animation: open 0.3s ease-in-out;
-        }
-  
-        @keyframes open {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-        details summary::-webkit-details-marker {
-          display: none;
-        }
-  
-        details summary {
-          width: 100%;
-          padding: 0.5rem 0;
-          border-top: 1px solid rgb(255, 255, 255);
-          position: relative;
-          cursor: pointer;
-          font-size: 1.25rem;
-          font-weight: 300;
-          list-style: none;
-        }
-  
-        details summary:after {
-          content: "+";
-          color: rgb(255, 255, 255);
-          position: absolute;
-          font-size: 1.75rem;
-          line-height: 0;
-          margin-top: 0.75rem;
-          right: 0;
-          font-weight: 200;
-          transform-origin: center;
-          transition: 200ms linear;
-        }
-        details[open] summary:after {
-          transform: rotate(45deg);
-          font-size: 2rem;
-        }
-        details summary {
-          outline: 0;
-        }
-        details p {
-          font-size: 0.95rem;
-          margin: 0 0 1rem;
-          padding-top: 1rem;
-        }
-      </style>
-</head>
-<body>
-<header class="header">
-    <a href="#" class="cyber">Cyber</a>
-    <nav class="navbar">
+      }
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details summary {
+        width: 100%;
+        padding: 0.5rem 0;
+        border-top: 1px solid rgb(255, 255, 255);
+        position: relative;
+        cursor: pointer;
+        font-size: 1.25rem;
+        font-weight: 300;
+        list-style: none;
+      }
+
+      details summary:after {
+        content: "+";
+        color: rgb(255, 255, 255);
+        position: absolute;
+        font-size: 1.75rem;
+        line-height: 0;
+        margin-top: 0.75rem;
+        right: 0;
+        font-weight: 200;
+        transform-origin: center;
+        transition: 200ms linear;
+      }
+      details[open] summary:after {
+        transform: rotate(45deg);
+        font-size: 2rem;
+      }
+      details summary {
+        outline: 0;
+      }
+      details p {
+        font-size: 0.95rem;
+        margin: 0 0 1rem;
+        padding-top: 1rem;
+      }
+    .site-footer {
+      background-color: #26272b;
+      padding: 45px 0 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #737373;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .site-footer hr {
+      border-top-color: #bbb;
+      opacity: 0.5;
+    }
+
+    .site-footer hr.small {
+      margin: 20px 0;
+    }
+
+    .site-footer h6 {
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      letter-spacing: 2px;
+    }
+
+    .site-footer a {
+      color: #737373;
+    }
+
+    .site-footer a:hover {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    .footer-links {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .footer-links li {
+      display: block;
+    }
+
+    .footer-links a {
+      color: #737373;
+    }
+
+    .footer-links a:active,
+    .footer-links a:focus,
+    .footer-links a:hover {
+      color: #3366cc;
+      text-decoration: none;
+    }
+
+    .footer-links.inline li {
+      display: inline-block;
+    }
+
+    .site-footer .social-icons {
+      text-align: right;
+    }
+
+    .site-footer .social-icons a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 6px;
+      margin-right: 0;
+      border-radius: 100%;
+      background-color: #33353d;
+    }
+
+    .site-footer .col-md-6 {
+  text-align: left;
+  /* Additional margin for moving the About section towards the right */
+  margin-left: 50px;
+}
+.site-footer .col-md-6 h6 {
+  margin-bottom: 15px;
+  text-align: left; /* Align the header to the left */
+  margin-left: 01px;
+}
+
+/* Updated CSS for Quick Links (without Categories) */
+.site-footer .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-footer .col-md-6 h6 {
+  margin-bottom: 15px;
+}
+
+.site-footer .col-md-6 ul.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.site-footer .col-md-6 ul.footer-links li {
+  display: block;
+}
+
+.site-footer .col-md-6 ul.footer-links a {
+  color: #737373;
+}
+
+.site-footer .col-md-6 ul.footer-links a:active,
+.site-footer .col-md-6 ul.footer-links a:focus,
+.site-footer .col-md-6 ul.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+/* Additional CSS for Spacing */
+.site-footer .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.site-footer .col-md-4 {
+  flex: 0 0 30%; /* Adjust the width as needed */
+}
+
+.site-footer h6 {
+  margin-bottom: 10px;
+}
+
+.site-footer p {
+  margin-bottom: 20px;
+}
+
+.site-footer .footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.site-footer .footer-links li {
+  display: block;
+}
+
+.site-footer .footer-links a {
+  color: #737373;
+}
+
+.site-footer .footer-links a:active,
+.site-footer .footer-links a:focus,
+.site-footer .footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+
+    .copyright-text {
+      text-align: left;
+      margin-top: 10px;
+      margin-left: 50px;
+    }
+
+    @media (max-width: 991px) {
+      .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 767px) {
+    .site-footer {
+      padding-bottom: 0;
+    }
+    .site-footer .copyright-text,
+      .site-footer .social-icons {
+        text-align: center;
+      }
+    }
+
+    .social-icons {
+      padding-right: 50px;
+      margin-bottom: 0;
+      list-style: none;
+    }
+
+    .social-icons li {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .social-icons li.title {
+      margin-right: 15px;
+      text-transform: uppercase;
+      color: #96a2b2;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .social-icons a {
+      background-color: #eceeef;
+      color: #818a91;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: 30px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+    }
+
+    .social-icons a:active,
+    .social-icons a:focus,
+    .social-icons a:hover {
+      color: #fff;
+      background-color: #29aafe;
+    }
+
+    .social-icons.size-sm a {
+      line-height: 34px;
+      height: 34px;
+      width: 34px;
+      font-size: 14px;
+    }
+
+    .social-icons a.facebook:hover {
+      background-color: #3b5998;
+    }
+
+    .social-icons a.twitter:hover {
+      background-color: #00aced;
+    }
+
+    .social-icons a.linkedin:hover {
+      background-color: #007bb6;
+    }
+
+    .social-icons a.dribbble:hover {
+      background-color: #ea4c89;
+    }
+
+    @media (max-width: 767px) {
+      .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="cyber">Cyber</a>
+      <nav class="navbar">
         <a href="web.html">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-        <button class="btnLogin-popup">Login</button>
-    </nav>
-</header>
+        <a href="about.html">About</a>
+        <a href="contactUs.html">Contact</a>
+        <a class="btnLogin-popup" href="login.html">Login</a>
+      </nav>
+    </header>
     <section>
-      <h1>Hypertext Accordion</h1>
+      <h1>Frequently Asked Questions</h1>
       <details class="accordion">
-        <summary>Details</summary>
+        <summary>What is Log Analysis?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+          Log analysis is essential for identifying issues in digital systems by
+          examining system logs. This process streamlines operations, aids in
+          incident analysis, and enables data-driven decisions for a secure and
+          efficient infrastructure.
         </p>
       </details>
       <details class="accordion">
-        <summary>Features</summary>
+        <summary>Why is Log Analysis important?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+          Log analysis is crucial for swiftly identifying anomalies, errors, and
+          potential security threats. It contributes to operational efficiency,
+          streamlining troubleshooting processes, and aiding in post-incident
+          analysis.
         </p>
       </details>
       <details class="accordion">
-        <summary>Information</summary>
+        <summary>What role does Log Analysis play in troubleshooting?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+          Log analysis is a vital part of troubleshooting as it helps pinpoint
+          the root causes of issues. By examining logs, IT teams can identify
+          errors, performance bottlenecks, and other factors affecting system
+          functionality.
         </p>
       </details>
       <details class="accordion">
-        <summary>Specifications</summary>
+        <summary>What types of logs are typically analyzed?</summary>
         <p>
-          Lorem ipsum dolor sit amet, eu alia suscipit mei. Reque iriure
-          delectus vix id, ex sed forensibus suscipiantur. In eos exerci mollis
-          apeirian, an qui latine alienum. Ad mea libris maluisset, consul
-          assueverit sea ex.
+          Various logs are analyzed, including system logs, application logs,
+          security logs, and network logs. Each provides specific information
+          related to the functioning of different components within a system.
+        </p>
+      </details>
+      <details class="accordion">
+        <summary>How does Log Analysis contribute to security?</summary>
+        <p>
+          Log analysis plays a key role in cybersecurity by detecting and
+          mitigating security threats. It helps identify unusual patterns,
+          unauthorized access, and other indicators of potential breaches.
         </p>
       </details>
     </section>
+      <!-- Site footer -->
+      <!-- Updated Footer Section -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- About Section -->
+        <h6>About</h6>
+        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+      </div>
+
+      <div class="col-md-4">
+        <!-- Quick Links Section -->
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">About Us</a></li>
+          <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <!-- Copyright Text -->
+        <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <!-- Social Icons Section -->
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const accordions = document.querySelectorAll(".accordion");
@@ -152,6 +463,6 @@
         });
       });
     </script>
-<script src="login.js"></script>
-</body>
+    <script src="login.js"></script>
+  </body>
 </html>

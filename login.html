@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and Register</title>
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="/login.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -20,9 +20,8 @@
       <a href="#" class="cyber">Cyber</a>
       <nav class="navbar">
         <a href="web.html">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="about.html">About</a>
+        <a href="contactUs.html">Contact</a>
         <button class="btnLogin-popup">Login</button>
       </nav>
     </header>
@@ -41,7 +40,7 @@
             <br />
             <p>Please login to use the platform</p>
           </div>
-          <form action="#">
+          <form action="/login" method="post">
             <div class="input-box">
               <span class="icon"><i class="bx bxs-envelope"></i></span>
               <input type="email" required />
@@ -76,7 +75,7 @@
             <br />-
             <p>Please provide the following to verify your identity</p>
           </div>
-          <form action="#">
+          <form action="/register" method="post">
             <div class="input-box">
               <span class="icon"><i class="bx bxs-user"></i></span>
               <input type="text" required />
@@ -122,6 +121,6 @@
     </div>
     <!-- </section> -->
 
-    <script src="login.js"></script>
+    <script src="/login.js"></script>
   </body>
 </html>
