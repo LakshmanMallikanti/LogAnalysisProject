@@ -67,6 +67,6 @@ def train_and_evaluate_model(train_file, test_file):
 # Example usage
 if __name__ == "__main__":
     train_file = r"C:\Users\laksh\Desktop\CICIDS20181.csv"
-    test_file = r"C:\Users\laksh\Desktop\sample.csv"
+    test_file = r"C:\Users\laksh\Desktop\CICIDS20192.csv"
     anomaly_prediction = train_and_evaluate_model(train_file, test_file)
     print("Anomaly Prediction:", anomaly_prediction)
